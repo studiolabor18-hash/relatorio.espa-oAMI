@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Relatório Instagram · Espaço A.M.I · 08/09 a 27/09/2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--o:#FF6200;--o2:#FFB07A;--o3:#FFE3CF;--ink:#1c1917;--mut:#6b625b;--line:#e8e0d8;--bg:#fff;--soft:#fbf7f3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#fff;--ink:#1c1917}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.6 'DM Sans',system-ui,sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:0 24px}
+.top{border-bottom:1px solid var(--ink);padding:14px 0;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.top .w{display:flex;justify-content:space-between;gap:12px}.top b{color:var(--o)}
+header{padding:72px 0 48px}
+h1{font:italic 600 clamp(44px,8vw,88px)/.95 'Cormorant Garamond',serif;margin:0 0 20px;letter-spacing:-.01em}
+h1 em{color:var(--o)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 32px;color:var(--mut);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+section{padding:56px 0;border-top:1px solid var(--ink)}
+.n{font-size:12px;color:var(--o);font-weight:700;letter-spacing:.14em}
+h2{font:italic 600 clamp(30px,5vw,44px)/1.05 'Cormorant Garamond',serif;margin:6px 0 8px}
+.lead{color:var(--mut);max-width:620px;margin:0 0 32px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-left:1px solid var(--line)}
+.k{padding:20px 20px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.k small{display:block;color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.k strong{display:block;font:italic 600 52px/1.1 'Cormorant Garamond',serif;color:var(--o)}
+.k span{font-size:12px;color:var(--mut)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:760px){.g2{grid-template-columns:1fr;gap:28px}h1{line-height:1}}
+.cv{position:relative;height:280px}
+.tabs{display:flex;gap:0;margin-bottom:20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tabs button{all:unset;cursor:pointer;padding:8px 16px;font-size:13px;color:var(--mut);border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs button.on{color:var(--ink);border-color:var(--o);font-weight:700}
+.pane{display:none}.pane.on{display:block}
+.sc{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:500;padding:8px 10px;border-bottom:1px solid var(--ink)}
+td{padding:11px 10px;border-bottom:1px solid var(--line)}
+td.r,th.r{text-align:right}td.rk{font:italic 600 22px 'Cormorant Garamond',serif;color:var(--o);width:44px}
+.tag{font-size:11px;border:1px solid var(--ink);padding:1px 8px;border-radius:2px}
+.note{background:var(--soft);border-left:3px solid var(--o);padding:16px 20px;margin-top:24px;font-size:14px}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:18px 0;display:flex;gap:14px;align-items:baseline;font:italic 600 24px/1.2 'Cormorant Garamond',serif}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";margin-left:auto;color:var(--o);font:400 24px 'DM Sans'}
+details[open] summary::after{content:"–"}
+.b{font:700 10px 'DM Sans';letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--o);color:var(--o);white-space:nowrap}
+.b.a{background:var(--o);color:#fff}
+details p{margin:0 0 20px;max-width:700px;color:#3d3833}
+.rec{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0;border-left:1px solid var(--line)}
+.rec div{padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rec i{font:italic 600 40px 'Cormorant Garamond',serif;color:var(--o);display:block;line-height:1}
+.rec h3{margin:8px 0 6px;font-size:16px}.rec p{margin:0;color:var(--mut);font-size:14px}
+footer{background:var(--ink);color:#fff;padding:40px 0;margin-top:40px}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px}
+footer b{font:700 15px 'DM Sans';letter-spacing:.2em;color:var(--o)}
+.fade{opacity:0;transform:translateY(12px);transition:.6s}.fade.in{opacity:1;transform:none}
+</style></head><body>
+<div class="top"><div class="w"><span><b>Espaço A.M.I</b> · @espaco_a.m.i</span><span>Relatório de Instagram</span></div></div>
+<header><div class="w">
+<div class="n">RELATÓRIO DE DESEMPENHO</div>
+<h1>Setembro no <em>Espaço A.M.I</em></h1>
+<div class="meta"><span>Período: 08/09/2026 a 27/09/2026</span><span>Plataforma: Instagram</span><span>Preparado por Studio Labor</span></div>
+</div></header>
+
+<section class="fade"><div class="w">
+<div class="n">01</div><h2>Os números do período</h2>
+<p class="lead">O perfil alcançou 3.371 contas e gerou 32 mil visualizações, com 43,6% delas vindas de pessoas que ainda não seguem a página.</p>
+<div class="kpis">
+<div class="k"><small>Visualizações</small><strong data-c="32016">32.016</strong><span>56,4% seguidores · 43,6% não seguidores</span></div>
+<div class="k"><small>Contas alcançadas</small><strong data-c="3371">3.371</strong><span>≈ 9,5 conteúdos vistos por conta</span></div>
+<div class="k"><small>Interações</small><strong data-c="1032">1.032</strong><span>3,2% das visualizações</span></div>
+<div class="k"><small>Seguidores líquidos</small><strong data-c="46">+46</strong><span>Total: 1.204 (+4,2% em 30 dias)</span></div>
+<div class="k"><small>Visitas ao perfil</small><strong data-c="692">692</strong><span>33 toques no link da bio (4,8%)</span></div>
+</div></div></section>
+
+<section class="fade"><div class="w">
+<div class="n">02</div><h2>Onde as pessoas assistem</h2>
+<p class="lead">Stories somam metade das visualizações, mas os reels são o formato que mais converte visualização em interação.</p>
+<div class="tabs" data-t="f"><button class="on">Visualizações</button><button>Interações</button><button>Taxa de engajamento</button></div>
+<div class="g2"><div>
+<div class="pane on"><div class="cv"><canvas id="c1"></canvas></div></div>
+<div class="pane"><div class="cv"><canvas id="c2"></canvas></div></div>
+<div class="pane"><div class="cv"><canvas id="c3"></canvas></div></div>
+</div>
+<div class="sc"><table><tr><th>Formato</th><th class="r">Views</th><th class="r">Interações</th><th class="r">Curtidas</th><th class="r">Coment.</th></tr>
+<tr><td>Stories</td><td class="r">16 mil</td><td class="r">439</td><td class="r">345</td><td class="r">0</td></tr>
+<tr><td>Reels</td><td class="r">9,1 mil</td><td class="r">412</td><td class="r">333</td><td class="r">36</td></tr>
+<tr><td>Posts</td><td class="r">6,9 mil</td><td class="r">202</td><td class="r">137</td><td class="r">15</td></tr></table>
+<p style="font-size:12px;color:var(--mut)">Reposts: 34 em reels e 26 em posts. A soma por formato (1.053) difere em 21 do total do período (1.032) por diferença de janela do Instagram.</p></div></div>
+</div></section>
+
+<section class="fade"><div class="w">
+<div class="n">03</div><h2>Quem descobre a página</h2>
+<div class="g2"><div>
+<p class="lead">Os reels abrem a porta para novos públicos: cerca de 55% de quem viu os três reels de maior alcance não seguia o perfil.</p>
+<div class="cv"><canvas id="c4"></canvas></div></div>
+<div><div class="cv" style="height:340px"><canvas id="c5"></canvas></div>
+<p style="font-size:12px;color:var(--mut)">Percentual de visualizações vindas de não seguidores, por conteúdo.</p></div></div>
+</div></section>
+
+<section class="fade"><div class="w">
+<div class="n">04</div><h2>Conteúdos que mais performaram</h2>
+<p class="lead">Ordenados por visualizações no período. A taxa considera interações ÷ visualizações.</p>
+<div class="sc"><table><tr><th></th><th>Conteúdo</th><th>Formato</th><th class="r">Views</th><th class="r">Taxa</th></tr>
+<tr><td class="rk">1</td><td>Hoje é Dia da Bailarina</td><td><span class="tag">Reel</span></td><td class="r">3.085</td><td class="r">4,1%</td></tr>
+<tr><td class="rk">2</td><td>Seu filho ainda precisa…</td><td><span class="tag">Reel</span></td><td class="r">2.823</td><td class="r">4,6%</td></tr>
+<tr><td class="rk">3</td><td>Você conhece a equipe do Espaço AMI?</td><td><span class="tag">Post</span></td><td class="r">1.653</td><td class="r">6,2%</td></tr>
+<tr><td class="rk">4</td><td>Dificuldade de aprendizagem não é tudo igual</td><td><span class="tag">Carrossel</span></td><td class="r">1.474</td><td class="r">1,9%</td></tr>
+<tr><td class="rk">5</td><td>Essa é uma dúvida que…</td><td><span class="tag">Reel</span></td><td class="r">1.328</td><td class="r">4,3%</td></tr>
+<tr><td class="rk">6</td><td>Um Minuto para Pensar</td><td><span class="tag">Reel</span></td><td class="r">~1.300</td><td class="r">—</td></tr>
+<tr><td class="rk">7</td><td>Terapia Ocupacional também é para adultos</td><td><span class="tag">Post</span></td><td class="r">1.213</td><td class="r">1,5%</td></tr>
+<tr><td class="rk">8</td><td>Atendimento de Fonoaudiologia (registro)</td><td><span class="tag">Story</span></td><td class="r">~1.100</td><td class="r">—</td></tr>
+<tr><td class="rk">9</td><td>Story de profissional na porta da sala</td><td><span class="tag">Story</span></td><td class="r">905</td><td class="r">—</td></tr>
+<tr><td class="rk">10</td><td>Setembro Amarelo não é só um mês</td><td><span class="tag">Post</span></td><td class="r">838</td><td class="r">3,3%</td></tr></table></div>
+<div class="note"><b>Menor alcance, maior engajamento.</b> O reel "Você já parou para pensar…" teve 802 views, mas a maior taxa do período (7,9%, 63 interações) e foi o conteúdo que mais trouxe novos seguidores (3).</div>
+</div></section>
+
+<section class="fade"><div class="w">
+<div class="n">05</div><h2>O que teve menos alcance</h2>
+<div class="sc"><table><tr><th>Conteúdo</th><th>Formato</th><th class="r">Views</th></tr>
+<tr><td>Story com profissional sentada no sofá azul</td><td><span class="tag">Story</span></td><td class="r">81</td></tr>
+<tr><td>Story com profissional sentada no sofá azul (outro dia)</td><td><span class="tag">Story</span></td><td class="r">84</td></tr>
+<tr><td>Story repost do post "Você conhece a equipe"</td><td><span class="tag">Story</span></td><td class="r">84</td></tr>
+<tr><td>Story "Manhã de estimulação…"</td><td><span class="tag">Story</span></td><td class="r">87</td></tr>
+<tr><td>Story repost do post Setembro Amarelo</td><td><span class="tag">Story</span></td><td class="r">90</td></tr></table></div>
+<div class="note"><b>Padrão:</b> os cinco piores são stories, e dois deles são reposts de posts do feed. O mesmo post no feed teve 1.653 e 838 views. Repost de feed no story quase não gera alcance novo.</div>
+</div></section>
+
+<section class="fade"><div class="w">
+<div class="n">06</div><h2>Quando o público está online</h2>
+<p class="lead">A atividade sobe às 9h e se mantém alta até as 21h, com pico às 18h. O Instagram indica terças, quintas e sextas, das 18h às 21h.</p>
+<div class="cv"><canvas id="c6"></canvas></div>
+<p style="font-size:12px;color:var(--mut)">Índice relativo (pico = 100), leitura de terça-feira.</p>
+</div></section>
+
+<section class="fade"><div class="w">
+<div class="n">07</div><h2>Quem é o público</h2>
+<div class="tabs" data-t="d"><button class="on">Faixa etária</button><button>Cidades</button><button>Gênero</button></div>
+<div class="pane on"><div class="cv"><canvas id="c7"></canvas></div></div>
+<div class="pane"><div class="cv"><canvas id="c8"></canvas></div></div>
+<div class="pane"><div class="cv" style="height:300px"><canvas id="c9"></canvas></div></div>
+<p style="font-size:13px;color:var(--mut)">98,8% do público está no Brasil. 64% tem entre 35 e 54 anos.</p>
+</div></section>
+
+<section class="fade"><div class="w">
+<div class="n">08</div><h2>Crescimento e conversão</h2>
+<div class="g2"><div>
+<p class="lead">Conteúdos que mais trouxeram seguidores no período.</p>
+<div class="cv"><canvas id="c10"></canvas></div></div>
+<div class="sc" style="align-self:center"><table><tr><th>Conversão</th><th class="r">Total</th></tr>
+<tr><td>Visitas ao perfil</td><td class="r">692</td></tr>
+<tr><td>Toques no link da bio</td><td class="r">33 (4,8%)</td></tr>
+<tr><td>Toques no endereço comercial</td><td class="r">0</td></tr>
+<tr><td>Perdas de seguidores por dia</td><td class="r">até 3</td></tr></table>
+<p style="font-size:13px;color:var(--mut)">Pico de novos seguidores em meados de setembro, com cerca de 18 em um único dia.</p></div></div>
+</div></section>
+
+<section class="fade"><div class="w">
+<div class="n">09</div><h2>Leitura estratégica</h2>
+<details open><summary><span class="b a">Positivo</span>Reels são a porta de entrada</summary><p>Os reels têm a maior taxa de engajamento (4,5% contra 2,9% dos posts e 2,7% dos stories) e cerca de 55% do público que assiste é de não seguidores. Os dois reels com profissionais falando direto para a câmera e o reel de bastidor da equipe lideram em alcance.</p></details>
+<details><summary><span class="b">Padrão</span>Rostos da equipe engajam mais que arte gráfica</summary><p>O post "Você conhece a equipe" tem 6,2% de engajamento e 83,7% das interações vieram de seguidores, sinal de vínculo. Já os carrosséis de conteúdo informativo ficam entre 1,5% e 3,3%.</p></details>
+<details><summary><span class="b a">Atenção</span>Terapia Ocupacional ainda não engaja</summary><p>O post sobre Terapia Ocupacional para adultos teve 1.213 views, mas só 18 interações, nenhum comentário e nenhum salvamento. Como TO é a especialidade que a clínica quer fortalecer, o formato atual (arte estática) não está cumprindo o papel.</p></details>
+<details><summary><span class="b">Oportunidade</span>Stories têm volume, falta direcionamento</summary><p>Stories geram 16 mil views e 439 interações, mas as interações são quase só curtidas e os reposts de feed com 84 a 90 views. Enquetes, caixinhas de pergunta e bastidores tendem a converter esse volume em conversa.</p></details>
+<details><summary><span class="b a">Atenção</span>Conversão do perfil para contato é baixa</summary><p>Das 692 visitas, 33 tocaram no link da bio (4,8%) e ninguém tocou no endereço comercial. Vale revisar o link, o botão de contato e o endereço configurado no perfil.</p></details>
+<details><summary><span class="b">Padrão</span>Público adulto e feminino, coerente com a estratégia</summary><p>86,3% mulheres, 64% entre 35 e 54 anos e 82,8% em São Paulo. É o perfil de mães e responsáveis que buscam avaliação para os filhos, e também de adultos que podem se interessar por TO.</p></details>
+</div></section>
+
+<section class="fade"><div class="w">
+<div class="n">10</div><h2>Recomendações</h2>
+<div class="rec">
+<div><i>1</i><h3>Mais reels com profissionais</h3><p>Manter 8 reels por mês, priorizando fala direta e bastidor. Alcance e taxa são os melhores do perfil.</p></div>
+<div><i>2</i><h3>Levar a Terapia Ocupacional para vídeo</h3><p>Reel curto explicando situações em que a TO ajuda adultos e crianças, com a terapeuta em cena.</p></div>
+<div><i>3</i><h3>Postar terça, quinta e sexta, 18h às 21h</h3><p>Concentrar os lançamentos de feed e reels nesses horários de maior atividade.</p></div>
+<div><i>4</i><h3>Parar de repostar feed no story</h3><p>Trocar por conteúdo nativo do story com enquete, caixinha de perguntas e bastidor do dia.</p></div>
+<div><i>5</i><h3>Criar chamada para ação nos reels</h3><p>Fechar com "chame no WhatsApp" ou "link na bio" para converter os 43,6% de não seguidores em contatos.</p></div>
+<div><i>6</i><h3>Revisar link e endereço do perfil</h3><p>Testar o link da bio e conferir o botão de endereço, que hoje tem zero toques.</p></div>
+<div><i>7</i><h3>Manter constância até o fim do mês</h3><p>As visualizações diárias caem no fim do período. Calendário sem lacunas evita a queda de alcance.</p></div>
+</div></div></section>
+
+<footer><div class="w"><div><b>STUDIO LABOR</b><br>Do conteúdo à câmera</div><div>@studio.labor<br>WhatsApp (11) 93204-6611</div><div>Andriele Duarte<br>Dados: Instagram Insights, 08/09 a 27/09/2026</div></div></footer>
+
+<script>
+const O='#FF6200',O2='#FFB07A',O3='#FFE3CF',K='#1c1917';
+Chart.defaults.font.family="'DM Sans',sans-serif";Chart.defaults.color='#6b625b';
+const mk=(id,cfg)=>new Chart(document.getElementById(id),cfg);
+const dn=(id,l,d)=>mk(id,{type:'doughnut',data:{labels:l,datasets:[{data:d,backgroundColor:[O,O2,K],borderWidth:2,borderColor:'#fff'}]},options:{maintainAspectRatio:false,cutout:'62%',plugins:{legend:{position:'bottom'}}}});
+const bar=(id,l,d,o={})=>mk(id,{type:'bar',data:{labels:l,datasets:[{data:d,backgroundColor:o.col||O,borderRadius:2}]},options:Object.assign({maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{grid:{color:'#eee'},beginAtZero:true}}},o.opt||{})});
+const F=['Stories','Reels','Posts'];
+dn('c1',F,[16000,9100,6900]);dn('c2',F,[439,412,202]);
+bar('c3',F,[2.7,4.5,2.9],{col:[O2,O,O2]});
+dn('c4',['Seguidores','Não seguidores'],[56.4,43.6]);
+bar('c5',['Reel: Essa é uma dúvida','Reel: Bailarina','Reel: Seu filho','Reel: Você já parou','Post: Avaliação','Post: Equipe'],[55.6,54.7,55.9,49,39.8,35],{opt:{indexAxis:'y',scales:{x:{max:100,grid:{color:'#eee'}},y:{grid:{display:false}}}}});
+bar('c6',['0h','3h','6h','9h','12h','15h','18h','21h'],[23,16,71,86,95,90,100,89],{col:['#FFB07A','#FFB07A','#FFB07A','#FFB07A','#FFB07A','#FFB07A',O,'#FFB07A']});
+bar('c7',['13-17','18-24','25-34','35-44','45-54','55-64','65+'],[0.2,4.7,23.8,38.3,25.7,5.7,1.7],{col:[O2,O2,O2,O,O,O2,O2]});
+bar('c8',['São Paulo','Caieiras','Franco da Rocha','Osasco','Santana de Parnaíba'],[82.8,1.3,1.2,0.9,0.8],{opt:{indexAxis:'y',scales:{x:{grid:{color:'#eee'}},y:{grid:{display:false}}}}});
+dn('c9',['Mulheres','Homens'],[86.3,13.7]);
+bar('c10',['Você já parou para pensar','Dia da Bailarina','Sofá azul (story)','Essa é uma dúvida','Final de atendimento','TO para adultos','Seu filho ainda precisa','Equipe AMI'],[3,2,1,1,1,1,1,1],{opt:{indexAxis:'y',scales:{x:{grid:{color:'#eee'},ticks:{stepSize:1}},y:{grid:{display:false}}}}});
+document.querySelectorAll('.tabs').forEach(t=>{const p=[...t.parentElement.querySelectorAll(':scope > .pane, :scope > .g2 > div > .pane')];t.querySelectorAll('button').forEach((b,i)=>b.onclick=()=>{t.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');p.forEach((q,j)=>q.classList.toggle('on',i===j));Object.values(Chart.instances).forEach(c=>c.resize())})});
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.08});
+document.querySelectorAll('.fade').forEach(s=>io.observe(s));
+document.querySelectorAll('[data-c]').forEach(el=>{const v=+el.dataset.c,pre=el.textContent.startsWith('+')?'+':'';let s=null;const f=ts=>{s=s||ts;const p=Math.min((ts-s)/1200,1);el.textContent=pre+Math.round(v*p).toLocaleString('pt-BR');if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)});
+</script></body></html>
